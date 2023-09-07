@@ -62,3 +62,58 @@ describe('Week 6 Lab Tests:', () => {
   })
   /*--------------------------NEW TESTS BELOW-------------------------------*/
 })
+
+describe('Question 1a: Sorted array of numbers', () => {
+  it('#Should sort the array in ascending order', () => {
+    //Arrange Act
+    let arrayOfNumbers = [1, 5, 3, 2, 4]
+    arrayOfNumbers = arrayOfNumbers.sort((a, b) => a - b)
+    //Assert
+    expect(arrayOfNumbers).to.deep.equal([1,2,3,4,5])
+  })
+})
+
+describe('Question 1b: Manage my wallet', () => {
+  it('#Should be able to remove money from the wallet', () => {
+    //Arrange
+    class Wallet {
+      constructor(startingMoney) {
+        this.money = startingMoney
+      }
+    
+      addMoney(amount) {
+        this.money += amount
+      }
+    
+      removeMoney(amount) {
+        this.money -= amount
+      }
+    }
+    //Act
+    const myWallet = new Wallet(100)
+    myWallet.removeMoney(14.99)
+    //Assert
+    expect(myWallet.money).to.equal(100-14.99)
+  })
+  it('#Should be able to add money to the wallet', () => {
+    //Arrange
+    class Wallet {
+      constructor(startingMoney) {
+        this.money = startingMoney
+      }
+    
+      addMoney(amount) {
+        this.money += amount
+      }
+    
+      removeMoney(amount) {
+        this.money -= amount
+      }
+    }
+    //Act
+    const myWallet = new Wallet(100)
+    myWallet.addMoney(3)
+    //Assert
+    expect(myWallet.money).to.equal(100+3)
+  })
+})

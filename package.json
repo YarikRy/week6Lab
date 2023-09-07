@@ -1,6 +1,15 @@
 {
   "dependencies": {
-    "chai": "^4.3.7",
+    "chai": "^4.3.8",
     "mocha": "^10.2.0"
-  }
+  },
+  "name": "c",
+  "version": "1.0.0",
+  "description": "s",
+  "main": "tests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
