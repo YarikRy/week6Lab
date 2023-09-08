@@ -117,3 +117,83 @@ describe('Question 1b: Manage my wallet', () => {
     expect(myWallet.money).to.equal(100+3)
   })
 })
+
+describe('Questiuon 1c: Should give out the day based on the number input', () => {
+  it('Should give out the correct name of the day based on the number value', () => {
+    //Arrange
+    const dayOfTheWeek = (num) => {
+      switch (num) {
+        case 1:
+          return 'Monday'
+        case 2:
+          return 'Tuesday'
+        case 3:
+          return 'Wednesday'
+        case 4:
+          return 'Thursday'
+        case 5:
+          return 'Friday'
+        case 6:
+          return 'Saturday'
+        case 7:
+          return 'Sunday'
+        default:
+          return 'Err. Something went wrong.'
+      }
+    }
+    //Act
+    const mon = dayOfTheWeek(1)
+    const tue = dayOfTheWeek(2)
+    const wed = dayOfTheWeek(3)
+    const thu = dayOfTheWeek(4)
+    const fri = dayOfTheWeek(5)
+    const sat = dayOfTheWeek(6)
+    const sun = dayOfTheWeek(7)
+    const err = dayOfTheWeek(9)
+    //Assert
+    expect(mon).to.equal('Monday')
+    expect(tue).to.equal('Tuesday')
+    expect(wed).to.equal('Wednesday')
+    expect(thu).to.equal('Thursday')
+    expect(fri).to.equal('Friday')
+    expect(sat).to.equal('Saturday')
+    expect(sun).to.equal('Sunday')
+    expect(err).to.equal('Err. Something went wrong.')
+  })
+})
+
+describe('Question 1d: Only wizards shall pass!', () => {
+  it('#Should print out only the characters which key/value isAWizard is set to true', () => {
+    //Arrange 
+    const movieCharacters = [
+      {
+        name: 'Howl',
+        isAWizard: true,
+        quote: `You're wearing that hat? After all the magic I used to make your dress pretty?`,
+      },
+      {
+        name: 'Kalcifer',
+        isAWizard: false,
+        quote: `I don't cook! I'm a scary and powerful fire demon!`,
+      },
+      {
+        name: 'Gandalf',
+        isAWizard: true,
+        quote: `You shall not pass!`,
+      },
+      {
+        name: 'Luke Skywalker',
+        isAWizard: false,
+        quote: `May the Force be with you.`,
+      },
+    ]
+    
+    function onlyWizards(arrayOfCharacters) {
+      return arrayOfCharacters.filter((character) => character.isAWizard == true)
+    }
+    //Act
+    let onlyWiz = onlyWizards(movieCharacters)
+    //Assert
+    expect(onlyWiz).to.deep.equal([movieCharacters[0], movieCharacters[2]])
+  })
+})

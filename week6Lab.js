@@ -105,59 +105,59 @@ console.log(`1c: Day of the Week`)
 //In some cases, there's no error, but you're not getting your expected result back.
 //Reminder: Switch statements are a 'cleaner' version of if/else
 
-// const dayOfTheWeek = (num) => {
-//   switch (num) {
-//     case 1:
-//       'Monday'
-//     case 2:
-//       'Tuesday'
-//     case 3:
-//       'Wednesday'
-//     case 4:
-//       'Thursday'
-//     case 5:
-//       'Friday'
-//     case 6:
-//       'Saturday'
-//     case 7:
-//       'Sunday'
-//     default:
-//       console.log('Err. Something went wrong.')
-//   }
-// }
+const dayOfTheWeek = (num) => {
+  switch (num) {
+    case 1:
+      return 'Monday'
+    case 2:
+      return 'Tuesday'
+    case 3:
+      return 'Wednesday'
+    case 4:
+      return 'Thursday'
+    case 5:
+      return 'Friday'
+    case 6:
+      return 'Saturday'
+    case 7:
+      return 'Sunday'
+    default:
+      return 'Err. Something went wrong.'
+  }
+}
 
-// console.log(dayOfTheWeek(5)) // should log Friday
+console.log(dayOfTheWeek(5)) // should log Friday
 /*----------------------------------------------------*/
 console.log(`1d: Only wizards shall pass!`)
 
-// const movieCharacters = [
-//   {
-//     name: 'Howl',
-//     isAWizard: true,
-//     quote: `You're wearing that hat? After all the magic I used to make your dress pretty?`,
-//   },
-//   {
-//     name: 'Kalcifer',
-//     isAWizard: false,
-//     quote: `I don't cook! I'm a scary and powerful fire demon!`,
-//   },
-//   {
-//     name: 'Gandalf',
-//     isAWizard: true,
-//     quote: `You shall not pass!`,
-//   },
-//   {
-//     name: 'Luke Skywalker',
-//     isAWizard: false,
-//     quote: `May the Force be with you.`,
-//   },
-// ]
+const movieCharacters = [
+  {
+    name: 'Howl',
+    isAWizard: true,
+    quote: `You're wearing that hat? After all the magic I used to make your dress pretty?`,
+  },
+  {
+    name: 'Kalcifer',
+    isAWizard: false,
+    quote: `I don't cook! I'm a scary and powerful fire demon!`,
+  },
+  {
+    name: 'Gandalf',
+    isAWizard: true,
+    quote: `You shall not pass!`,
+  },
+  {
+    name: 'Luke Skywalker',
+    isAWizard: false,
+    quote: `May the Force be with you.`,
+  },
+]
 
-// function onlyWizards(arrayOfCharacters) {
-//   return arrayOfCharacters.filter((character) => character == true)
-// }
+function onlyWizards(arrayOfCharacters) {
+  return arrayOfCharacters.filter((character) => character.isAWizard == true)
+}
 
 // //check out the console.table() method you can use on objects!
-// console.table(onlyWizards(movieCharacters)) //expecting an array of characters whose key/value pair is = isAWizard: true
+console.table(onlyWizards(movieCharacters)) //expecting an array of characters whose key/value pair is = isAWizard: true
 /*----------------------------------------------------*/
 console.log(`-----------Finished------------`)
